@@ -3,18 +3,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<style type="text/css">
-  body{
-      margin-top:200px; 
-  }
-</style>
-</head>
+     <style type="text/css">
+        .container{
+             width:700px;
+        }
+    </style>
+   <%@ include file="/js/nav.jsp" %>
+ 
+ </head>
+
 <%@ include file="/member/nav.jsp" %>
 <body>
+	
+<%@ include file="/js/dingbu.jsp" %>
+
 <br><br><br><br><br>
+
+
    <div class="container">
+   
        <center><h2>会员管理</h2></center>
      <table class="table">
 		<tr>
@@ -72,5 +79,8 @@
   </table>
    
    </div>
+
+   <%@ include file="/js/button.jsp" %>
+
 </body>
 </html>

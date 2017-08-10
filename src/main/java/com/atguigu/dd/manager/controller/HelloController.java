@@ -21,19 +21,7 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hello(@RequestParam(value = "id", defaultValue = "2") Integer id, Model model) {
-        Person person = new Person();
-         TUser tUser = userService.getUserById(id);
-         model.addAttribute("user", tUser);
-
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("key01", "val01...");
-        map.put("key02", "val02...");
-        map.put("key03", "val03...");
-        map.put("key04", "val04...");
-        map.put("key05", "val05...");
-        map.put("key06", "val06...");
-        System.out.println(map);
-
+         System.out.println(123);
         return "forward:/success.jsp";
     }
 

@@ -1,23 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<%@ include file="/Order/nav.jsp" %>
-</head>
-<body>
-<br><br><br><br><br>
-   <div class="container">
-       <center><h2>订单管理</h2></center>
-     <table class="table">
+<%@ include file="/member/nav.jsp" %>
+ <head>
+   <%@ include file="/js/nav.jsp" %>
+ 
+ </head>
+
+	<body>
+		<%@ include file="/js/dingbu.jsp" %>
+
+		<div class="margin-big-top layout">
+			<div class="container border border-gray-white member clearfix">
+				<%@ include file="/js/left.jsp" %>
+				<div class="right padding-big-left padding-big-right">
+					<div class="margin-big-top border">
+						<div class="padding-big-left padding-big-right border-bottom bg-gray-white text-lh-40">
+							<center>
+								<h1>订单管理</h1></center>
+
+						</div>
+					</div>
+		 <table class="table">
 		<tr>
-		  <td class="active">订单id</td>
+		  <td class="active">消息id</td>
 		  <td class="active">订单名</td>
 		  <td class="active">XXX</td>
 		  <td class="active">XXX</td>
-		  <td class="active">XXXXXX</td>
+		  <td class="active">会员名</td>
 		    <td class="active">操作</td>
 		</tr>
 		
@@ -65,8 +76,9 @@
 					 </td>
 				 </tr>
   </table>
-   
-   </div>
+				</div>
+			</div>
+			<%@ include file="/js/button.jsp" %>
+	</body>
 
-</body>
 </html>

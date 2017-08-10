@@ -1,58 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 	    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="${pageContext.request.contextPath }/ads/bootStrap/jquery-3.2.1.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath }/ads/bootStrap/bootstrap.css" type="text/css"></link>
-<script type="text/javascript" src="${pageContext.request.contextPath }/ads/bootStrap/bootstrap.js"></script>
-<script type="text/javascript"></script>
-<style type="text/css">
-   body{
-      margin-top:30px;
-   }
-  .botn{
-  margin-left:500px;
-  
-  }
-  
-  
-  
+<%@ include file="/member/nav.jsp" %>
+ <head>
+   <%@ include file="/js/nav.jsp" %>
+ 
+ </head>
 
-</style>
-</head>
-<body>
-<div class="container">
+	<body>
+		<%@ include file="/js/dingbu.jsp" %>
 
-         <center><h4>广告审核</h4></center>
+		<div class="margin-big-top layout">
+			<div class="container border border-gray-white member clearfix">
+				<%@ include file="/js/left.jsp" %>
+				<div class="right padding-big-left padding-big-right">
+					<div class="margin-big-top border">
+						<div class="padding-big-left padding-big-right border-bottom bg-gray-white text-lh-40">
+							<center>
+								<h1>广告管理</h1></center>
 
-     <table class="table">
-			<tr class="active"><td>广告id</td>
-			<td>广告名</td>
-			<td>广告图片</td>
-			<td>发布时间</td>
-			<td>审核状态</td></tr>
-			
+						</div>
+					</div>
+		 <table class="table">
+		<tr>
+		  <td class="active">消息id</td>
+		  <td class="active">订单名</td>
+		  <td class="active">XXX</td>
+		  <td class="active">XXX</td>
+		  <td class="active">会员名</td>
+		    <td class="active">操作</td>
+		</tr>
+		
 	
-			<tr>
-			  <td class="active">XXX</td>
-			  <td class="success">XXx</td>
-			  <td class="warning"><img src="" style="widht:100px;height:100px"></img></td>
-			  <td class="danger">1222-12-12</td>
-			  <td class="info">未通过</td>
-			</tr> 
-			
-			<tr class="active">
-			  <td class="active">XXX</td>
-			  <td class="success">XXx</td>
-			  <td class="warning"><img src="" style="widht:100px;height:100px"></img></td>
-			  <td class="danger">1222-12-12</td>
-			  <td class="info">未通过</td>
-			</tr>     
+		<tr>
+		  <td class="active">xx</td>
+		  <td class="success">xxx</td>
+		  <td class="warning">xxx</td>
+		  <td class="danger">xxxx</td>
+		  <td class="info">xxxx</td>
+		   <td>
+				      <button type="button" class="btn btn-success btn-xs"><i class="">增加</i></button>
+				      <button type="button" class="btn btn-primary btn-xs"><i class="">删除</i></button>
+					  <button type="button" class="btn btn-danger btn-xs"><i class="">修改</i></button>
+			</td>
+		  
+		</tr>
+		
+		<tr>
+		  <td class="active">XX</td>
+		  <td class="success">XX</td>
+		  <td class="warning">XX</td>
+		  <td class="danger">XX</td>
+		  <td class="info">XX</td>
+		  <td>
+				   <button type="button" class="btn btn-success btn-xs"><i class="">增加</i></button>
+				      <button type="button" class="btn btn-primary btn-xs"><i class="">删除</i></button>
+					  <button type="button" class="btn btn-danger btn-xs"><i class="">修改</i></button>
+		  </td>
+		  
 		   
+		</tr>
+	
 			     <tr >
 				     <td colspan="6" align="center">
 						<ul class="pagination">
@@ -66,11 +75,10 @@
 							 </ul>
 					 </td>
 				 </tr>
-			
-    </table>
-   </div>
+  </table>
+				</div>
+			</div>
+			<%@ include file="/js/button.jsp" %>
+	</body>
 
-
-
-</body>
 </html>
