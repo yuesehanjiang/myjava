@@ -34,8 +34,15 @@
 
 
 <script type="text/javascript">
+
+
+
+
+
 var setting = {
 		view: {
+			fontCss : {background:"blue",size:23},  
+			 nameIsHTML: true  ,
 			dblClickExpand: false//屏蔽掉双击事件
 			},
         data: {
@@ -49,20 +56,77 @@ var setting = {
          
         },
         
-        callback: {
-        	onClick: "onClick"
-        	}
+  
        
   };
    var znod=null;
+   
+   function getFont(treeId, node) {  
+       return node.font ? node.font : {};  
+   }  
  
   $(function(){
 	  $.post("${ctp}/menu/all",function(data){
 		   var zNodes =data;
-	  $.fn.zTree.init($("#ss"), setting, zNodes);
+	  	   $.fn.zTree.init($("#ss"), setting, zNodes);
+	  	   
+	  	   //隐藏加号
+	  	   $("span.button.switch ").css("display","none");
+	  	   
+	  	   var leavls = document.querySelectorAll("a.level0");
+	 	   for(var i=0;i<leavls.length;i++){
+	 		 
+	 	 	leavls[i].onclick=function(){
+	 	 		// $("span.button.switch ").css("display","none");
+	 			 $(this).parent()
+	 			.children(":eq(0)").trigger("click");
+	 			 
+	 			 
+	 			
+	 			  var ml = document.querySelectorAll("a.level1");
+	 		 	 
+	 	            // alert("m1"+ml.length);
+	 		 	   for(var i=0;i<ml.length;i++){
+	 		 		  ml[i].onclick=function(){
+	 		 			 $(this).parent()
+	 		 			.children(":eq(0)").trigger("click");
+	 		 		   }
+	 		 		   
+	 		 	   }
+	 			 
+	 			 
+	 			 
+	 			 
+	 			 
+	 		}  
+	 		var ye=leavls[i];
+	 		  console.log(ye);
+	 		  
+	 		  
+	 		  
+	 		
+	 	   }
+	 	   
+	 	
+	 	   
       
 	   },"json") 
-        alert(123);
+      
+	   var as = $("ul a");
+	    alert($("ul a.level0").length);
+	    $("ul a.level0").click(function() {
+	    	alert(123);
+	    	return false;
+	        //这里需要找到当前ul中的li，然后让li显示出来
+	        //获取当前被点击的a节点
+	      //  var aNode = $(this);
+	        //找到当前a节点的所有li兄弟字节点
+	       // var lis = aNode.nextAll("li");
+	        //让子节点显示或隐藏
+	       // lis.toggle("show");
+	    });
+	   
+	 
   })
 
  
