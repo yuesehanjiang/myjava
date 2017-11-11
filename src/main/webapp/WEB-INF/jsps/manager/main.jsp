@@ -107,17 +107,17 @@
         
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main right">
                
-         <div id="cc" class="easyui-layout easy" style="width:600px;height:400px;">   
+         <div id="cc" class="easyui-layout easy" style="width:400px;height:400px;">   
 		       <div data-options="region:'center',title:'企业宣传'" style="padding:5px;background:#eee;"></div>   
 		</div>  
 
-           <div id="cc" class="easyui-layout easy" style="width:600px;height:400px;">   
+           <div id="cc" class="easyui-layout easy" style="width:400px;height:400px;">   
 		    <div data-options="region:'center',title:'企业公告'" style="padding:5px;background:#eee;"></div>   
 		  </div>  
-           <div id="cc" class="easyui-layout easy" style="width:600px;height:400px;">   
+           <div id="cc" class="easyui-layout easy" style="width:400px;height:400px;">   
 		    <div data-options="region:'center',title:'流程办理 '" style="padding:5px;background:#eee;"></div>   
 		  </div> 
-           <div id="cc" class="easyui-layout easy" style="width:600px;height:400px;">   
+           <div id="cc" class="easyui-layout easy" style="width:400px;height:400px;">   
 		    <div data-options="region:'center',title:'来访信息'" style="padding:5px;background:#eee;"></div>   
 		  </div> 
 		  
@@ -125,7 +125,7 @@
 		    <div data-options="region:'center',title:'及时消息'" style="padding:5px;background:#eee;"></div>   
 		  </div> 
 
-                
+               <span id="ss_A_span">点我</span> 
         </div>
       </div>
     </div>
@@ -142,7 +142,45 @@
 						}
 					}
 				});
-            });
+			    
+			 
+			  
+			var mm=    escapeJquery("ss_1_span");
+		
+			    $("a.level0 span").dblclick(function(){
+			      
+			    	alert(123);
+			    });
+			    })
+          
+            function escapeJquery(srcString) {
+            	 // 转义之后的结果
+            	 var escapseResult = srcString;
+
+            	 // javascript正则表达式中的特殊字符
+            	 var jsSpecialChars = ["\\", "^", "$", "*", "?", ".", "+", "(", ")", "[",
+            	   "]", "|", "{", "}"];
+
+            	 // jquery中的特殊字符,不是正则表达式中的特殊字符
+            	 var jquerySpecialChars = ["~", "`", "@", "#", "%", "&", "=", "'", "\"",
+            	   ":", ";", "<", ">", ",", "/"];
+
+            	 for (var i = 0; i < jsSpecialChars.length; i++) {
+            	  escapseResult = escapseResult.replace(new RegExp("\\"
+            	        + jsSpecialChars[i], "g"), "\\"
+            	      + jsSpecialChars[i]);
+            	 }
+
+            	 for (var i = 0; i < jquerySpecialChars.length; i++) {
+            	  escapseResult = escapseResult.replace(new RegExp(jquerySpecialChars[i],
+            	      "g"), "\\" + jquerySpecialChars[i]);
+            	 }
+
+            	 return escapseResult;
+            	}
+            
+            
+            
         </script>
   </body>
 </html>
